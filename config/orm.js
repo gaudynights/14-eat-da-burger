@@ -46,7 +46,7 @@ var orm = {
 			if (err){
 				throw err;
 			}
-			cb(result);
+			cb(res);
 		});
 	},
 	
@@ -62,7 +62,7 @@ var orm = {
 	    var queryString = "UPDATE " + table;
 
 	    queryString += " SET ";
-	    queryString += objToSql(objColVals);
+	    queryString += "eaten=1";
 	    queryString += " WHERE ";
 	    queryString += condition;
 

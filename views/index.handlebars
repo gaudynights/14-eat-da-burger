@@ -1,0 +1,52 @@
+<h1>Barry want hamburger!</h1>
+<h2>Help Barry by making him different kinds of hamburgers, then he'll eat them!</h2>
+
+<div id="ready-section">
+<h3>Burgers ready for Barry:</h3>
+<ul>
+  {{#each burgers}}
+    {{#unless this.eaten}}
+      <li>
+      {{> burgers/burger-block eaten=true}}
+
+      {{!-- {{this.name}} --}}
+  		</li>
+    {{/unless}}
+  {{/each}}
+</ul>
+</div>
+
+<div id="eaten-section">
+<h2>Burgers Barry has eaten so far:</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.eaten}}
+    <li>
+      {{> burgers/burger-block eaten=true}}
+    </li>
+    {{/if}}
+  {{/each}}
+</ul>
+</div>
+
+
+
+<div id="new-burg-section">
+<h2>Add a new burger for Barry!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">Cat Name:</label>
+    <input type="text" id="burg" name="name">
+  </div>
+
+{{!--   <div class="form-group">
+    <label for="eaten">Sleepy?</label><br>
+    <input type="radio" name="eaten" value="1" checked> Sleepy!<br>
+    <input type="radio" name="eaten" value="0"> Awake
+  </div> --}}
+
+  <button type="submit">Make that burger!</button>
+</form>
+</div>

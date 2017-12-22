@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
-		<title>Barry's Burger Time!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<!-- <script src="/assets/js/burger.js"></script> -->
-	</head>
-	<body>
-		{{{ body }}}
-
-		<script type="text/javascript">
-			
-			// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-eaten").on("click", function(event) {
     var id = $(this).data("id");
@@ -57,8 +43,3 @@ $(function() {
     );
   });
 });
-
-
-		</script>
-	</body>
-</html>
